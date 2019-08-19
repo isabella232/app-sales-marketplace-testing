@@ -1,9 +1,11 @@
+# include: "//app-sales-adapter/account_adapter.view"
+include: "//app-sales-config/quota.view"
 
 # Quota Explore: Solely used for the Sales App Audit dashboard
-explore: quota {
-  hidden: yes
-  fields: [ALL_FIELDS*, -quota.manager_quota, -quota.aggregate_quota]
-}
+# explore: quota {
+#   hidden: yes
+#   fields: [ALL_FIELDS*, -quota.manager_quota, -quota.aggregate_quota]
+# }
 
 
 ########################################################################

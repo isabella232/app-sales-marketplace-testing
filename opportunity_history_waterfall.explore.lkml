@@ -1,4 +1,10 @@
 include: "opportunity_history_waterfall_core.view"
+include: "//app-sales-config/sales_analytics.model"
+
+explore: opportunity_history_waterfall {
+  extends: [opportunity_history_waterfall_config]
+  hidden: no
+}
 
 explore: opportunity_history_waterfall_core {
   hidden:  yes

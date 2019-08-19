@@ -1,4 +1,10 @@
 include: "lead_core.view.lkml"
+include: "//app-sales-config/sales_analytics.model"
+
+explore: lead {
+  extends: [lead_config]
+  hidden: no
+}
 
 explore: lead_core {
   extension: required

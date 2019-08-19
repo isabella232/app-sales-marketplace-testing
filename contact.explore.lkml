@@ -1,4 +1,11 @@
 include: "contact_core.view.lkml"
+include: "//app-sales-config/contact.view"
+include: "//app-sales-config/sales_analytics.model"
+
+explore: contact {
+  extends: [contact_config]
+  hidden: no
+}
 
 explore: contact_core {
   extension: required

@@ -1,3 +1,9 @@
+include: "//app-sales-config/opportunity.view"
+
+view: opportunity {
+  extends: [opportunity_config]
+}
+
 view: opportunity_core {
   extension: required
   extends: [opportunity_adapter]

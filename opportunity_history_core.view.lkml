@@ -1,3 +1,14 @@
+include: "//app-sales-config/opportunity_history.view"
+include: "//app-sales-adapter/opportunity_history_adapter.view"
+include: "//app-sales-config/opportunity.view"
+include: "//app-sales-config/opportunity_stage_history.view"
+
+
+
+view: opportunity_history {
+  extends: [opportunity_history_config]
+}
+
 
 view: opportunity_history_core {
   extends: [opportunity_history_adapter]
@@ -31,6 +42,10 @@ explore: opportunity_history_core {
 
 explore: opportunity_stage_history {
   hidden: yes
+}
+
+view: opportunity_stage_history {
+  extends: [opportunity_stage_history_config]
 }
 
 # This derived table first pulls the user-defined stages from the app-sales-config project. Then it generates a list of all the possible

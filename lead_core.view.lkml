@@ -1,3 +1,9 @@
+include: "//app-sales-config/lead.view"
+
+view: lead {
+  extends: [lead_config]
+}
+
 view: lead_core {
   extension: required
   extends: [lead_adapter]

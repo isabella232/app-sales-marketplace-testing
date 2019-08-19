@@ -1,3 +1,9 @@
+include: "//app-sales-config/sales_analytics.model"
+
+explore: opportunity {
+  extends: [opportunity_config]
+  hidden: no
+}
 
 explore: opportunity_core {
   extension: required

@@ -1,3 +1,11 @@
+include: "//app-sales-adapter/campaign_adapter.view"
+include: "//app-sales-config/campaign.view.lkml"
+
+view: campaign {
+  extends: [campaign_config]
+}
+
+
 view: campaign_core {
   extends: [campaign_adapter]
 

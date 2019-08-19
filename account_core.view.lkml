@@ -1,6 +1,14 @@
+include: "//app-sales-adapter/account_adapter.view"
+include: "//app-sales-config/account.view"
+
+view: account {
+  extends: [account_config]
+}
+
 view: account_core {
   extends: [account_adapter]
-#   extension: required
+  extension: required
+
 
   # filters #
   filter: account_select {

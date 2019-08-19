@@ -1,3 +1,9 @@
+include: "//app-sales-config/contact.view"
+
+view: contact {
+  extends: [contact_config]
+}
+
 view: contact_core {
   extension: required
   extends: [contact_adapter]
