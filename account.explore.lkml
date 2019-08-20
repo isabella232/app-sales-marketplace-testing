@@ -1,11 +1,5 @@
 include: "account_core.view.lkml"
 include: "account_facts.view.lkml"
-include: "//app-sales-config/sales_analytics.model"
-
-explore: account {
-  extends: [account_config]
-  hidden: no
-}
 
 explore: account_core {
   extension: required

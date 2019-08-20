@@ -10,16 +10,7 @@ local_dependency: {
   project: "app-sales-config"
 }
 
-local_dependency: {
-  project: "app-sales-adapter-bare"
-}
-
-# remote_dependency: app-sales-config {
-#   url: "git@github.com:looker/app-sales.git"
-#   ref: "eccaff89662da5ac0763b629145578673b459d80"
-# }
-
 application: sales-analytics-application {
   label: "Sales Analytics"
-  definition_file: "app-sales//application.json"
+  definition_file: "application.json"
 }
