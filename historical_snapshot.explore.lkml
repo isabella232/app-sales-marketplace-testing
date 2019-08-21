@@ -1,7 +1,4 @@
 include: "historical_snapshot_core.view.lkml"
-# include: "//app-sales-config/explore_extends.explore.lkml"
-
-# include: "//app-sales-config/explore_extends.explore.lkml"
 include: "//app-sales-config/sales_analytics_config.model"
 
 

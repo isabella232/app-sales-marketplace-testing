@@ -1,4 +1,5 @@
 connection: "app-salesforce"
+
 include: "*.view"
 include: "//app-sales-adapter/*.view"
 include: "//app-sales-config/*.view"

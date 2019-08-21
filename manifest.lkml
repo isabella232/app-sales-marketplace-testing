@@ -19,6 +19,7 @@ local_dependency: {
 #   ref: "eccaff89662da5ac0763b629145578673b459d80"
 # }
 
+
 application: sales-analytics-application {
   label: "Sales Analytics"
   definition_file: "application.json"
