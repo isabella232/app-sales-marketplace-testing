@@ -1,3 +1,9 @@
+include: "//app-sales-config/opportunity_history_days_in_current_stage.view"
+
+view: opportunity_history_days_in_current_stage {
+  extends: [opportunity_history_days_in_current_stage_config]
+}
+
 view: opportunity_history_days_in_current_stage_core {
   extension: required
   derived_table: {

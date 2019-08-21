@@ -7,6 +7,7 @@ view: lead {
 view: lead_core {
   extension: required
   extends: [lead_adapter]
+
   # dimensions #
 
   dimension_group: _fivetran_synced { hidden: yes }

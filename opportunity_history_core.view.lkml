@@ -7,6 +7,7 @@ include: "//app-sales-config/opportunity_stage_history.view"
 
 view: opportunity_history {
   extends: [opportunity_history_config]
+
 }
 
 
@@ -53,7 +54,8 @@ view: opportunity_stage_history {
 # the table then ensures that any missing stages are filled in. In the outer query, additional metrics such as days in each stage and
 # amount are selected.
 view: opportunity_stage_history_core {
-  extends: [stage_customization]
+  extends: [stage_customization_config]
+
   derived_table: {
     sql:
       with stages as (

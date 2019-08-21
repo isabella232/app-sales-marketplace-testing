@@ -10,6 +10,10 @@ include: "//app-sales-config/quota.view"
 
 ########################################################################
 
+view: quota {
+  extends: [quota_config]
+}
+
 view: quota_core {
 
   filter: segment_select {
@@ -100,6 +104,11 @@ view: quota_core {
 
 ##########################################################################################
 
+view: aggregate_quota {
+  extends: [aggregate_quota_config]
+}
+
+
 view: aggregate_quota_core {
   derived_table: {
     sql:
@@ -169,6 +178,9 @@ view: aggregate_quota_core {
 
 ############################################################################################################
 
+view: manager_quota {
+  extends: [manager_quota_config]
+}
 
 view: manager_quota_core {
   derived_table: {

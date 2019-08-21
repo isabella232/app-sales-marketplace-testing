@@ -1,6 +1,4 @@
 
-# If necessary, uncomment the line below to include explore_source.
-# include: "sales_analytics.model.lkml"
 
 explore: waterfall_derived {hidden: yes}
 

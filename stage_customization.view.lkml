@@ -1,3 +1,9 @@
+include: "//app-sales-config/opportunity.view.lkml"
+
+view: stage_customization {
+  extends: [stage_customization_config]
+}
+
 view: stage_customization_core {
 
   dimension: stage_1 {

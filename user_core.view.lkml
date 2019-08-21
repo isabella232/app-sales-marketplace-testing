@@ -1,3 +1,9 @@
+include: "//app-sales-config/user.view"
+
+view: user {
+  extends: [user_config]
+}
+
 view: user_core {
   extends: [user_adapter]
   extension: required

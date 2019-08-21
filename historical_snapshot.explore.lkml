@@ -1,10 +1,9 @@
 include: "historical_snapshot_core.view.lkml"
-include: "//app-sales-config/sales_analytics.model"
+# include: "//app-sales-config/explore_extends.explore.lkml"
 
-explore: contact {
-  extends: [contact_config]
-  hidden: no
-}
+# include: "//app-sales-config/explore_extends.explore.lkml"
+include: "//app-sales-config/sales_analytics_config.model"
+
 
 explore: historical_snapshot_core  {
   extension: required

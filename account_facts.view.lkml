@@ -1,4 +1,7 @@
 # These DTs are used to dimensionalize account facts (i.e. start date, lifetime value). Needed for single value viz's on customer lookup tiles.
+include: "//app-sales-config/account.view"
+
+
 view: account_facts_start_date {
   derived_table: {
     explore_source: opportunity {
@@ -51,8 +54,9 @@ view: account_facts_customer_lifetime_value {
   }
 }
 
-
-
+view: account_facts_is_customer {
+extends: [account_facts_is_customer_config]
+}
 
 view: account_facts_is_customer_core {
   derived_table: {

@@ -1,3 +1,9 @@
+include: "//app-sales-config/task.view"
+
+view: task {
+  extends: [task_config]
+}
+
 view: task_core {
   extends: [task_adapter]
   extension: required
