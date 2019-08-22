@@ -1,0 +1,39 @@
+{
+    "label": "Sales Analytics",
+    "category_label": "Applications",
+    "branding": {
+      "badge": "Beta",
+      "brand_color": "#35465C",
+      "image_uri": "https://marketplace-api.looker.com/app-icons/icon_sales_analytics.svg",
+      "tagline": "Stacks on stacks on stacks"
+    },
+    "constants": {
+        "CONNECTION_NAME": {
+            "label": "Connection Name",
+            "description": "The connection that houses your Salesforce data.",
+            "value_constraint": "connection"
+        },
+        "SCHEMA_NAME": {
+            "label": "Schema Name",
+            "description": "The schema name of your Salesforce Data."
+        },
+        "CONFIG_PROJECT_NAME": {
+            "label": "Config Project Name",
+            "description": "The name of the associated config project."
+        }
+    },
+    "models": [
+        {
+            "name": "sales_analytics",
+            "connection_constant": "CONNECTION_NAME"
+        }
+    ],
+    "auxiliary_projects": [
+        {
+            "git_uri": "git://github.com/looker/app-sales-config-marketplace-testing.git",
+            "git_ref": "95165d9ca02228ca69203b14406229afc455e0a4",
+            "label": "Sales App Config",
+            "constant_name": "CONFIG_PROJECT_NAME"
+        }
+    ]
+}
