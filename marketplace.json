@@ -2,10 +2,10 @@
     "label": "Sales Analytics",
     "category_label": "Applications",
     "branding": {
+      "tagline": "Understand performance, prioritize opportunities, and close more deals with Looker's application for Sales Analytics",
       "badge": "Beta",
-      "brand_color": "#35465C",
-      "image_uri": "https://marketplace-api.looker.com/app-icons/icon_sales_analytics.svg",
-      "tagline": "Stacks on stacks on stacks"
+      "brand_color": "#6aa8ef",
+      "image_uri": "https://marketplace-api.looker.com/app-icons/icon_sales_analytics.svg"
     },
     "constants": {
         "CONNECTION_NAME": {
