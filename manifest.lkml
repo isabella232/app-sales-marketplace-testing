@@ -1,6 +1,6 @@
 project_name: "app-sales"
 
-application: sales-analytics-application {
+application: sales-analytics {
   label: "Sales Analytics"
   definition_file: "application.json"
 }
