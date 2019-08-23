@@ -13,10 +13,10 @@
             "value_constraint": "connection"
         },
         "SCHEMA_NAME": {
-            "label": "Schema Name",
+            "label": "Schema Name"
         },
         "CONFIG_PROJECT_NAME": {
-            "label": "Config Project Name",
+            "label": "Config Project Name"
         }
     },
     "models": [
