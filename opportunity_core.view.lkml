@@ -1,4 +1,4 @@
-include: "//app-sales-config/opportunity.view"
+include: "//@{CONFIG_PROJECT_NAME}/opportunity.view"
 
 view: opportunity {
   extends: [opportunity_config]

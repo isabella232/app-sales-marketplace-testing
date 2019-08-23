@@ -1,5 +1,5 @@
 # Used for Pipeline Waterfall Viz for "Pipeline Management" Dashboard
-include: "//app-sales-config/opportunity_history_waterfall.view"
+include: "//@{CONFIG_PROJECT_NAME}/opportunity_history_waterfall.view"
 
 view: opportunity_history_waterfall {
   extends: [opportunity_history_waterfall_config]

@@ -1,5 +1,5 @@
 include: "//app-sales-adapter/account_adapter.view"
-include: "//app-sales-config/account.view"
+include: "//@{CONFIG_PROJECT_NAME}/account.view"
 
 view: account {
   extends: [account_config]

@@ -1,4 +1,4 @@
-include: "//app-sales-config/task.view"
+include: "//@{CONFIG_PROJECT_NAME}/task.view"
 
 view: task {
   extends: [task_config]

@@ -1,6 +1,3 @@
-# include: "//app-sales-config/sales_analytics_config.model"
-#
-#
 explore: opportunity_core {
   extension: required
   view_name: opportunity

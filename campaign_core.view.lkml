@@ -1,5 +1,5 @@
 include: "//app-sales-adapter/campaign_adapter.view"
-include: "//app-sales-config/campaign.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/campaign.view.lkml"
 
 view: campaign {
   extends: [campaign_config]

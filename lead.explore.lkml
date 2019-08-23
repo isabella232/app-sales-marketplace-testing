@@ -1,9 +1,3 @@
-# include: "lead_core.view.lkml"
-#
-#
-# include: "//app-sales-config/explore_extends.explore.lkml"
-# include: "//app-sales-config/sales_analytics_config.model"
-#
 explore: lead_core {
   extension: required
   view_name: lead

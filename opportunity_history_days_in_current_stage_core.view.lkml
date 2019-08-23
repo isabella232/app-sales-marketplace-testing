@@ -1,4 +1,4 @@
-include: "//app-sales-config/opportunity_history_days_in_current_stage.view"
+include: "//@{CONFIG_PROJECT_NAME}/opportunity_history_days_in_current_stage.view"
 
 view: opportunity_history_days_in_current_stage {
   extends: [opportunity_history_days_in_current_stage_config]

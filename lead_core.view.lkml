@@ -1,4 +1,4 @@
-include: "//app-sales-config/lead.view"
+include: "//@{CONFIG_PROJECT_NAME}/lead.view"
 
 view: lead {
   extends: [lead_config]

@@ -2,10 +2,10 @@ connection: "app-salesforce"
 
 include: "*.view"
 include: "//app-sales-adapter/*.view"
-include: "//app-sales-config/*.view"
+include: "//@{CONFIG_PROJECT_NAME}/*.view"
 include: "*.dashboard"
 include: "*.explore"
-include: "//app-sales-config/sales_analytics_config.model"
+include: "//@{CONFIG_PROJECT_NAME}/sales_analytics_config.model"
 
 
 

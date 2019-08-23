@@ -1,5 +1,5 @@
 include: "historical_snapshot_core.view.lkml"
-include: "//app-sales-config/sales_analytics_config.model"
+include: "//@{CONFIG_PROJECT_NAME}/sales_analytics_config.model"
 
 
 explore: historical_snapshot_core  {

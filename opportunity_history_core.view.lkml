@@ -1,13 +1,11 @@
-include: "//app-sales-config/opportunity_history.view"
+include: "//@{CONFIG_PROJECT_NAME}/opportunity_history.view"
+include: "//@{CONFIG_PROJECT_NAME}/opportunity.view"
+include: "//@{CONFIG_PROJECT_NAME}/opportunity_stage_history.view"
 include: "//app-sales-adapter/opportunity_history_adapter.view"
-include: "//app-sales-config/opportunity.view"
-include: "//app-sales-config/opportunity_stage_history.view"
-
 
 
 view: opportunity_history {
   extends: [opportunity_history_config]
-
 }
 
 
@@ -49,7 +47,7 @@ view: opportunity_stage_history {
   extends: [opportunity_stage_history_config]
 }
 
-# This derived table first pulls the user-defined stages from the app-sales-config project. Then it generates a list of all the possible
+# This derived table first pulls the user-defined stages from the @{CONFIG_PROJECT_NAME} project. Then it generates a list of all the possible
 # stages and joins that to the stages present in the opportunity history table. By joining the list of all possible stages to the present stages,
 # the table then ensures that any missing stages are filled in. In the outer query, additional metrics such as days in each stage and
 # amount are selected.

@@ -1,7 +1,7 @@
 include: "opportunity_history_waterfall_core.view"
-# include: "//app-sales-config/explore_extends.explore.lkml"
+# include: "//@{CONFIG_PROJECT_NAME}/explore_extends.explore.lkml"
 
-include: "//app-sales-config/sales_analytics_config.model"
+include: "//@{CONFIG_PROJECT_NAME}/sales_analytics_config.model"
 include: "*.view"
 
 

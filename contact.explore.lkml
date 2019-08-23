@@ -1,9 +1,3 @@
-# include: "contact_core.view.lkml"
-# # include: "//app-sales-config/contact.view"
-# # include: "//app-sales-config/explore_extends.explore.lkml"
-#
-# include: "//app-sales-config/sales_analytics_config.model"
-#
 explore: contact_core {
   extension: required
   view_name: contact

@@ -1,5 +1,5 @@
 # These DTs are used to dimensionalize account facts (i.e. start date, lifetime value). Needed for single value viz's on customer lookup tiles.
-include: "//app-sales-config/account.view"
+include: "//@{CONFIG_PROJECT_NAME}/account.view"
 
 
 view: account_facts_start_date {

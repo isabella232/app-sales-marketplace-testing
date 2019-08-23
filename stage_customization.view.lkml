@@ -1,4 +1,4 @@
-include: "//app-sales-config/opportunity.view.lkml"
+include: "//@{CONFIG_PROJECT_NAME}/opportunity.view.lkml"
 
 view: stage_customization {
   extends: [stage_customization_config]

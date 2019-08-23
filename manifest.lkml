@@ -8,13 +8,11 @@ application: sales-analytics-application {
 
 ################ Constants ################
 
-# Used in google_analytics_block.model connection param
 constant: CONNECTION_NAME {
   value: "looker_application"
   export: override_required
 }
 
-# Used in ga_sessions.view sql_table_name
 constant: SCHEMA_NAME {
   value: "salesforce_for_looker"
   export: override_required
@@ -24,10 +22,6 @@ constant: CONFIG_PROJECT_NAME {
   value: "app-sales-config"
   export: override_required
 }
-
-
-
-
 
 ################ Dependencies ################
 
@@ -43,5 +37,4 @@ local_dependency: {
   override_constant: SCHEMA_NAME {
     value: "@{SCHEMA_NAME}"
   }
-
 }

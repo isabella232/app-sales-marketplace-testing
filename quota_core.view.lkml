@@ -1,5 +1,5 @@
 # include: "//app-sales-adapter/account_adapter.view"
-include: "//app-sales-config/quota.view"
+include: "//@{CONFIG_PROJECT_NAME}/quota.view"
 
 # Quota Explore: Solely used for the Sales App Audit dashboard
 # explore: quota {
