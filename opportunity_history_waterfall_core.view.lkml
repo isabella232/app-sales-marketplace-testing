@@ -829,51 +829,49 @@ view: opportunity_history_waterfall_filter_suggestions {
 
 
 # If necessary, uncomment the line below to include explore_source.
-# include: "sales_analytics.model.lkml"
-# include: "//app-sales-config/explore_extends.explore"
-# explore: opp_history_waterfall_derived {hidden: yes}
-# view: opp_history_waterfall_derived {
-#   derived_table: {
-#     explore_source: opportunity_history_waterfall {
-#       column: sankey_forecast_first {}
-#       column: sankey_forecast_last {}
-#       column: stage_name { field: opportunity.stage_name }
-#       column: name { field: opportunity.name }
-#       column: is_pipeline { field: opportunity.is_pipeline }
-#       column: total_amount { field: opportunity.total_amount }
-#       column: source { field: opportunity.source }
-#       column: owner_name { field: opportunity_owner.name }
-#       column: business_segment { field: account.business_segment }
-#       filters: {
-#         field: opportunity_history_waterfall.pipeline_dates
-#         value: "last fiscal quarter"
-#       }
-#     }
-#
-#   datagroup_trigger: sales_analytics_etl
-#   }
-#   dimension: sankey_forecast_first {}
-#   dimension: sankey_forecast_last {}
-#   dimension: stage_name {
-#     label: "Stage Name"
-#   }
-#   dimension: name {
-#     label: "Opportunity"
-#   }
-#   dimension: owner_name {
-#     label: "Owner Name"
-#   }
-#   dimension: is_pipeline {
-#     label: "Is Pipeline"
-#     type: yesno
-#   }
-#   dimension: total_amount {
-#     label: "Total ACV "
-#     value_format_name: custom_amount_value_format
-#     type: number
-#   }
-#   dimension: source {
-#     label: "Source"
-#   }
-#   dimension: business_segment {}
-# }
+explore: opp_history_waterfall_derived {hidden: yes}
+view: opp_history_waterfall_derived {
+  derived_table: {
+    explore_source: opportunity_history_waterfall {
+      column: sankey_forecast_first {}
+      column: sankey_forecast_last {}
+      column: stage_name { field: opportunity.stage_name }
+      column: name { field: opportunity.name }
+      column: is_pipeline { field: opportunity.is_pipeline }
+      column: total_amount { field: opportunity.total_amount }
+      column: source { field: opportunity.source }
+      column: owner_name { field: opportunity_owner.name }
+      column: business_segment { field: account.business_segment }
+      filters: {
+        field: opportunity_history_waterfall.pipeline_dates
+        value: "last fiscal quarter"
+      }
+    }
+
+  datagroup_trigger: sales_analytics_etl
+  }
+  dimension: sankey_forecast_first {}
+  dimension: sankey_forecast_last {}
+  dimension: stage_name {
+    label: "Stage Name"
+  }
+  dimension: name {
+    label: "Opportunity"
+  }
+  dimension: owner_name {
+    label: "Owner Name"
+  }
+  dimension: is_pipeline {
+    label: "Is Pipeline"
+    type: yesno
+  }
+  dimension: total_amount {
+    label: "Total ACV "
+    value_format_name: custom_amount_value_format
+    type: number
+  }
+  dimension: source {
+    label: "Source"
+  }
+  dimension: business_segment {}
+}
