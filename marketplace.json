@@ -10,16 +10,13 @@
     "constants": {
         "CONNECTION_NAME": {
             "label": "Connection Name",
-            "description": "Test",
             "value_constraint": "connection"
         },
         "SCHEMA_NAME": {
-            "label": "Schema Name",
-            "description": "Test"
+            "label": "Schema Name"
         },
         "CONFIG_PROJECT_NAME": {
-            "label": "Config Project Name",
-            "description": "Test"
+            "label": "Config Project Name"
         }
     },
     "models": [
@@ -32,7 +29,7 @@
         {
             "git_uri": "git://github.com/looker/app-sales-config-marketplace-testing.git",
             "git_ref": "65d3dfbee39ea9d986d6c563f52e655f3de97501",
-            "label": "Sales App Config",
+            "label": "Sales Analytics Config",
             "constant_name": "CONFIG_PROJECT_NAME"
         }
     ]
