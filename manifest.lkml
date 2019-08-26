@@ -9,7 +9,7 @@ application: sales-analytics {
 ################ Constants ################
 
 constant: CONNECTION_NAME {
-  value: "looker_application"
+  value: "app-salesforce"
   export: override_required
 }
 

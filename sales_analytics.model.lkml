@@ -1,4 +1,4 @@
-connection: "app-salesforce"
+connection: "@{CONNECTION_NAME}"
 
 include: "*.view"
 include: "//app-sales-adapter/*.view"
