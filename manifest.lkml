@@ -3,6 +3,7 @@ project_name: "app-sales"
 application: sales-analytics {
   label: "Sales Analytics"
   definition_file: "application.json"
+  config_project: "@{CONFIG_PROJECT_NAME}"
 }
 
 
