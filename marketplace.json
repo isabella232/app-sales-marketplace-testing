@@ -28,7 +28,7 @@
     "auxiliary_projects": [
         {
             "git_uri": "git://github.com/looker/app-sales-config-marketplace-testing.git",
-            "git_ref": "65d3dfbee39ea9d986d6c563f52e655f3de97501",
+            "git_ref": "1230b24ad8b1d41d117a49b76bbeece3d111506f",
             "label": "Sales Analytics Config",
             "constant_name": "CONFIG_PROJECT_NAME"
         }
