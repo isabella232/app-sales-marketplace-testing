@@ -1,10 +1,13 @@
 connection: "@{CONNECTION_NAME}"
 
-include: "*.view"
 include: "//app-sales-adapter/*.view"
-include: "//@{CONFIG_PROJECT_NAME}/*.view"
+
+include: "*.view"
 include: "*.dashboard"
 include: "*.explore"
+
+include: "//@{CONFIG_PROJECT_NAME}/*.view"
+include: "//@{CONFIG_PROJECT_NAME}/*.dashboard"
 include: "//@{CONFIG_PROJECT_NAME}/sales_analytics_config.model"
 
 
