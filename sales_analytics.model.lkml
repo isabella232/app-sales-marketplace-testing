@@ -7,7 +7,6 @@ include: "*.dashboard"
 include: "*.explore"
 
 include: "//@{CONFIG_PROJECT_NAME}/*.view"
-include: "//@{CONFIG_PROJECT_NAME}/*.dashboard"
 include: "//@{CONFIG_PROJECT_NAME}/sales_analytics_config.model"
 
 
