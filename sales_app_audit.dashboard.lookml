@@ -63,13 +63,27 @@
     col: 2
     width: 10
     height: 8
+  - title: Rep Quotas (Full Derived Table)
+    name: Rep Quotas (Full Derived Table)
+    model: sales_analytics
+    explore: quota
+    type: table
+    fields: [quota.name, quota.ae_segment, quota.quota_amount, quota.quota_start_date]
+    sorts: [quota.name, quota.quota_start_date]
+    limit: 500
+    query_timezone: UTC
+    series_types: {}
+    listen: {}
+    row: 9
+    col: 12
+    width: 10
+    height: 8
   - title: Business Segments
     name: Business Segments
     model: sales_analytics
     explore: account
     type: table
     fields: [account.business_segment]
-    fill_fields: [account.business_segment]
     limit: 500
     series_types: {}
     listen: {}
@@ -92,6 +106,42 @@
     col: 2
     width: 10
     height: 8
+  - title: Total Bookings (Last Quarter)
+    name: Total Bookings (Last Quarter)
+    model: sales_analytics
+    explore: opportunity
+    type: single_value
+    fields: [opportunity.total_closed_won_new_business_amount]
+    filters:
+      opportunity.close_fiscal_quarter: last fiscal quarter
+    limit: 1000
+    column_limit: 50
+    color_application:
+      collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
+      palette_id: fb7bb53e-b77b-4ab6-8274-9d420d3d73f3
+    custom_color_enabled: true
+    custom_color: ''
+    show_single_value_title: true
+    single_value_title: ''
+    show_comparison: false
+    comparison_type: value
+    comparison_reverse_colors: false
+    show_comparison_label: true
+    comparison_label: vs. Last Quarter
+    filter_expression: |-
+      # Only compare QTDs
+      ${opportunity.day_of_fiscal_quarter} <= ${opportunity.current_day_of_fiscal_quarter}
+    font_size: medium
+    text_color: black
+    hidden_fields: [opportunity.total_closed_won_revenue, change, yoy_change]
+    note_state: collapsed
+    note_display: hover
+    note_text: Total amount produced by quota-bearing deals last fiscal quarter.
+    listen: {}
+    row: 0
+    col: 2
+    width: 10
+    height: 3
   - title: Total Bookings (YTD)
     name: Total Bookings (YTD)
     model: sales_analytics
@@ -182,85 +232,6 @@
     col: 12
     width: 10
     height: 3
-  - title: Rep Quotas (Full Derived Table)
-    name: Rep Quotas (Full Derived Table)
-    model: sales_analytics
-    explore: quota
-    type: table
-    fields: [quota.name, quota.ae_segment, quota.quota_amount, quota.quota_start_date]
-    sorts: [quota.name, quota.quota_start_date]
-    limit: 500
-    query_timezone: UTC
-    series_types: {}
-    listen: {}
-    row: 9
-    col: 12
-    width: 10
-    height: 8
-  - title: Total Bookings (Last Quarter)
-    name: Total Bookings (Last Quarter)
-    model: sales_analytics
-    explore: opportunity
-    type: single_value
-    fields: [opportunity.total_closed_won_new_business_amount]
-    filters:
-      opportunity.close_fiscal_quarter: last fiscal quarter
-    limit: 1000
-    column_limit: 50
-    color_application:
-      collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      palette_id: fb7bb53e-b77b-4ab6-8274-9d420d3d73f3
-    custom_color_enabled: true
-    custom_color: ''
-    show_single_value_title: true
-    single_value_title: ''
-    show_comparison: false
-    comparison_type: value
-    comparison_reverse_colors: false
-    show_comparison_label: true
-    comparison_label: vs. Last Quarter
-    filter_expression: |-
-      # Only compare QTDs
-      ${opportunity.day_of_fiscal_quarter} <= ${opportunity.current_day_of_fiscal_quarter}
-    font_size: medium
-    text_color: black
-    hidden_fields: [opportunity.total_closed_won_revenue, change, yoy_change]
-    note_state: collapsed
-    note_display: hover
-    note_text: Total amount produced by quota-bearing deals last fiscal quarter.
-    listen: {}
-    row: 0
-    col: 2
-    width: 10
-    height: 3
-  - title: Pipeline (Last Quarter)
-    name: Pipeline (Last Quarter)
-    model: sales_analytics
-    explore: opportunity
-    type: single_value
-    fields: [opportunity.total_pipeline_new_business_amount]
-    filters:
-      opportunity.created_date: last quarter
-    limit: 500
-    column_limit: 50
-    custom_color_enabled: true
-    custom_color: ''
-    show_single_value_title: true
-    show_comparison: false
-    comparison_type: progress_percentage
-    comparison_reverse_colors: false
-    show_comparison_label: true
-    hidden_fields: [quota_numbers.quarterly_aggregate_quota_measure]
-    y_axes: []
-    note_state: collapsed
-    note_display: hover
-    note_text: Total amount of ongoing deals created last fiscal quarter (i.e. total
-      amount in the pipeline)
-    listen: {}
-    row: 3
-    col: 2
-    width: 10
-    height: 3
   - title: Number of Customers (Last Quarter)
     name: Number of Customers (Last Quarter)
     model: sales_analytics
@@ -286,6 +257,34 @@
     hidden_fields:
     listen: {}
     row: 6
+    col: 2
+    width: 10
+    height: 3
+  - title: Pipeline (Last Quarter)
+    name: Pipeline (Last Quarter)
+    model: sales_analytics
+    explore: opportunity
+    type: single_value
+    fields: [opportunity.total_pipeline_new_business_amount]
+    filters:
+      opportunity.created_date: last fiscal quarter
+    limit: 500
+    column_limit: 50
+    custom_color_enabled: true
+    custom_color: ''
+    show_single_value_title: true
+    show_comparison: false
+    comparison_type: progress_percentage
+    comparison_reverse_colors: false
+    show_comparison_label: true
+    hidden_fields: [quota_numbers.quarterly_aggregate_quota_measure]
+    y_axes: []
+    note_state: collapsed
+    note_display: hover
+    note_text: Total amount of ongoing deals created last fiscal quarter (i.e. total
+      amount in the pipeline)
+    listen: {}
+    row: 3
     col: 2
     width: 10
     height: 3
