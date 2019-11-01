@@ -29,7 +29,7 @@ constant: CONFIG_PROJECT_NAME {
 
 remote_dependency: app-sales-adapter  {
   url: "https://github.com/looker/app-sales-fivetran-bigquery"
-  ref: "ce34e98e4c3d0dc32111cfba7836f1d28b0187b8"
+  ref: "e748a79293e829e324002d48b13ef900ef95c12c"
 }
 
 local_dependency: {
