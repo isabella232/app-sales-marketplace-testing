@@ -14,31 +14,31 @@ view: opportunity_history_waterfall_core {
 
                               -- Pulls all opportunity field history records, their occur date, and the field with the updated value
                               SELECT opportunity_id, id, created_date, field, new_value
-                                FROM salesforce.opportunity_field_history
+                                FROM @{SCHEMA_NAME}.opportunity_field_history
                               UNION ALL
 
                               -- Grabs the oldest possible values for the fields of our opporunities
                               SELECT DISTINCT ofh.opportunity_id, CONCAT('old_', ofh.opportunity_id, '_', ofh.field, '_1'), o.created_date, ofh.field, FIRST_VALUE(ofh.old_value) OVER (PARTITION BY ofh.opportunity_id, ofh.field ORDER BY ofh.created_date ASC)
-                                FROM salesforce.opportunity_field_history AS ofh
-                                JOIN salesforce.opportunity AS o ON ofh.opportunity_id = o.id
+                                FROM @{SCHEMA_NAME}.opportunity_field_history AS ofh
+                                JOIN @{SCHEMA_NAME}.opportunity AS o ON ofh.opportunity_id = o.id
                                 WHERE field IN ('{{ amount_config._sql }}','CloseDate','Probability','StageName','ForecastCategoryName')
                               UNION ALL
 
                               -- Grabs the current values of our opportunities
                               SELECT id, CONCAT('new_', id, '_1'), created_date, '{{ amount_config._sql }}', CAST({{ amount_config._sql }} as STRING)
-                                FROM salesforce.opportunity
+                                FROM @{SCHEMA_NAME}.opportunity
                               UNION ALL
                               SELECT id, CONCAT('new_', id, '_2'), created_date, 'CloseDate', CAST(close_date as STRING)
-                                FROM salesforce.opportunity
+                                FROM @{SCHEMA_NAME}.opportunity
                               UNION ALL
                               SELECT id, CONCAT('new_', id, '_3'), created_date, 'Probability', CAST(probability as STRING)
-                                FROM salesforce.opportunity
+                                FROM @{SCHEMA_NAME}.opportunity
                               UNION ALL
                               SELECT id, CONCAT('new_', id, '_4'), created_date, 'StageName', stage_name
-                                FROM salesforce.opportunity
+                                FROM @{SCHEMA_NAME}.opportunity
                               UNION ALL
                               SELECT id, CONCAT('new_', id, '_5'), created_date, 'ForecastCategoryName', forecast_category_name
-                                FROM salesforce.opportunity
+                                FROM @{SCHEMA_NAME}.opportunity
                         ),
 
                         first_pass_history_flatten as (
