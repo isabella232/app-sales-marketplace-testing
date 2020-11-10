@@ -12,7 +12,7 @@ view: sf_opportunity_facts {
                 THEN amount
                 ELSE 0
               END) AS all_time_amount
-      FROM `salesforce.opportunity`
+      FROM `@{SCHEMA_NAME}.opportunity`
       GROUP BY 1
        ;;
   }
